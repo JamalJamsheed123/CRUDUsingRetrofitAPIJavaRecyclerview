@@ -15,15 +15,15 @@ public interface Daoclass {
     @Insert
     void insertAllData(PurchaseModel model);
 
-    //Select All Data
+    //GET All USER
     @Query("select * from  Purchase")
-    List<PurchaseModel> getAllData();
+    List< PurchaseModel > getAllData();
 
-    //DELETE DATA
+    //DELETE USER
     @Query("delete from Purchase where `id`= :id")
     void deleteData(int id);
 
-    //Update Data
+    //Update USER DATA
 
     @Query("update Purchase SET customerName= :customername ,productName =:productname, quantity =:quantity, purchaseDate =:purchasedate, contactNumber =:contactnumber, outletLocation =:outletlocation where `id`= :id")
     void updateData(String customername, String productname, String quantity, String purchasedate, String contactnumber, String outletlocation , int id);

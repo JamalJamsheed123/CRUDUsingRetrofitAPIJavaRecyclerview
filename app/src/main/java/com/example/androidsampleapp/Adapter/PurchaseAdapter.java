@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +16,6 @@ import com.example.androidsampleapp.EntityClass.PurchaseModel;
 import com.example.androidsampleapp.Features.UpdateDataActivity;
 import com.example.androidsampleapp.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PurchaseAdapter extends RecyclerView.Adapter<PurchaseAdapter.ViewHolder> {
@@ -25,14 +23,14 @@ public class PurchaseAdapter extends RecyclerView.Adapter<PurchaseAdapter.ViewHo
     List< PurchaseModel > list;
     DeleteItemClicklistner deleteItemClicklistner;
 
-    public PurchaseAdapter(Context context, List<PurchaseModel> list, DeleteItemClicklistner deleteItemClicklistner) {
+    public PurchaseAdapter(Context context, List< PurchaseModel > list, DeleteItemClicklistner deleteItemClicklistner) {
         this.context = context;
         this.list = list;
         this.deleteItemClicklistner = deleteItemClicklistner;
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setFilteredList(List<PurchaseModel> filteredList){
+    public void setFilteredList(List< PurchaseModel > filteredList){
         this.list = filteredList;
         notifyDataSetChanged();
     }

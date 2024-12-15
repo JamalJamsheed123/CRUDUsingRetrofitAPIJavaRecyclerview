@@ -3,9 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,16 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidSampleApp"
         tools:targetApi="31">
-        <activity
-            android:name=".Features.PostDataActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Features.GetDataApiActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".Features.AddRecordAPIActivity"
-            android:exported="true" />
         <activity
             android:name=".Features.UpdateDataActivity"
             android:exported="true" />

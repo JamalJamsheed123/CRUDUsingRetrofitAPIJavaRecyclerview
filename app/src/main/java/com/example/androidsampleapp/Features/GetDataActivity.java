@@ -1,10 +1,8 @@
 package com.example.androidsampleapp.Features;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -20,33 +18,19 @@ public class GetDataActivity extends AppCompatActivity {
 
     RecyclerView recyclerview;
 
-    private List<PurchaseModel> list;
+    private List< PurchaseModel > list;
     private PurchaseAdapter purchaseAdapter;
-    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_data);
         recyclerview = findViewById(R.id.recyclerview);
-        searchView = findViewById(R.id.searchView);
-        searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                filterList(newText);
-                return true;
-            }
-        });
     }
 
     private void filterList(String text) {
-        List<PurchaseModel> filteredList = new ArrayList<>();
+        List< PurchaseModel > filteredList = new ArrayList<>();
         for (PurchaseModel item: list){
             if (item.getCustomerName().toLowerCase().contains(text.toLowerCase())){
                 filteredList.add(item);

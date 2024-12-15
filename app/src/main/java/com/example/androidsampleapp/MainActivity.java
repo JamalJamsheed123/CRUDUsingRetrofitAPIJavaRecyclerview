@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.androidsampleapp.Features.AddRecordAPIActivity;
 import com.example.androidsampleapp.Features.AddRecordActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,10 +22,5 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 1);
         finish();
     }
-    public void addRecordOnClickAPI(View view) {
-        Intent intent = new Intent();
-        intent.setClass(MainActivity.this, AddRecordAPIActivity.class);
-        startActivityForResult(intent, 2);
-        finish();
-    }
+
 }
